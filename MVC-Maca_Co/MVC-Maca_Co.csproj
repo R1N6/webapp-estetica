@@ -146,6 +146,21 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\correo.png" />
+    <Content Include="img\direccion.png" />
+    <Content Include="img\facebook.png" />
+    <Content Include="img\fondo-servicios.jpg" />
+    <Content Include="img\twitter.png" />
+    <Content Include="img\house-pet.png" />
+    <Content Include="img\image.png" />
+    <Content Include="img\instagram.png" />
+    <Content Include="img\menu.png" />
+    <Content Include="img\scissors.png" />
+    <Content Include="img\shield.png" />
+    <Content Include="img\telefono-casa.png" />
+    <Content Include="img\telefono.png" />
+    <Content Include="img\usuario.png" />
+    <Content Include="img\whatsapp.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -196,9 +211,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Estetica.cshtml" />
+    <Content Include="Views\Home\Guarderia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
