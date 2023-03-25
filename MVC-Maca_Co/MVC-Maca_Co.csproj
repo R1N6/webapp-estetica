@@ -121,12 +121,16 @@
     <Compile Include="App_Start\BundleConfig2.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CorteController.cs" />
     <Compile Include="Controllers\EstatusController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Corte.cs" />
     <Compile Include="Models\Estatus.cs" />
+    <Compile Include="Models\Hotel.cs" />
     <Compile Include="Models\Query.cs" />
     <Compile Include="Models\Trabajador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -223,7 +227,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Data\" />
+    <Folder Include="Views\Corte\" />
     <Folder Include="Views\Estatus\" />
+    <Folder Include="Views\Hotel\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
