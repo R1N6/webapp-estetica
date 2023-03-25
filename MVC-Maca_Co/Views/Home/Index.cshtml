@@ -2,30 +2,135 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+<div class="w-100 d-flex justify-content-center align-items-center servicios mb-5  ">
+    <div class="row row-cols-2 w-100 justify-content-around ">
+        <div class=" col-md-12 text-center">
+            <h2 class="mt-5">Servicios</h2>
+        </div>
+
+        <div class="col-md-5 text-center mx-5 servicio">
+            <div>
+                <img src="~/img/scissors.png" width="150" height="150" alt="Estetica" />
+                <h4>Estetica</h4>
+                <p>
+                    Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit.m
+                </p>
+            </div>
+
+        </div>
+
+        <div class="col-md-5 text-center mx-5 servicio">
+            <div>
+                <img src="~/img/shield.png" width="150" height="150" alt="Guarderia" />
+                <h4>Guarderia</h4>
+                <p >
+                    Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit.m
+                </p>
+            </div>
+
+        </div>
+
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<div class="container preguntas mt-5">
+    <div class="row w-100 ">
+        <div class="col-md-12 text-center">
+            <h2>Preguntas Frecuentes</h2>
+        </div>
+        <hr />
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+    <div class="accordion accordion-flush " id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum?
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non velit sit amet nulla finibus consequat. Proin tincidunt sapien
+                    at lacus lobortis, vel eleifend nunc accumsan. In id lorem lobortis, fermentum justo ac, sagittis velit. Sed scelerisque molestie
+                    nunc sed molestie. Phasellus tempus diam sed lorem rhoncus blandit in euismod mi. Vestibulum scelerisque justo et accumsan mattis
+                    . Cras imperdiet interdum est, tincidunt viverra quam. Nullam nunc leo, interdum fringilla leo et,
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum?
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non velit sit amet nulla finibus consequat. Proin tincidunt sapien
+                    at lacus lobortis, vel eleifend nunc accumsan. In id lorem lobortis, fermentum justo ac, sagittis velit. Sed scelerisque molestie
+                    nunc sed molestie. Phasellus tempus diam sed lorem rhoncus blandit in euismod mi. Vestibulum scelerisque justo et accumsan mattis. Cras imperdiet interdum est, tincidunt viverra quam. Nullam nunc leo, interdum fringilla leo et,
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non velit sit amet nulla finibus consequat. Proin tincidunt sapien
+                    at lacus lobortis, vel eleifend nunc accumsan. In id lorem lobortis, fermentum justo ac, sagittis velit. Sed scelerisque molestie
+                    nunc sed molestie. Phasellus tempus diam sed lorem rhoncus blandit in euismod mi. Vestibulum scelerisque justo et accumsan mattis
+                    . Cras imperdiet interdum est, tincidunt viverra quam. Nullam nunc leo, interdum fringilla leo et,
+                </div>
+
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+</div>
+
+
+<div class="w-100 d-flex justify-content-center align-items-center mapa mt-5 border-top">
+    <div class="row row w-100 justify-content-around  ">
+        <div class=" col-md-12 text-center mt-3">
+            <h2>Ubicacion</h2>
+        </div>
+
+        <div class=" col-md-12 w-100 mt-3 google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.361640135258!2d-103.32763838507364!3d20.654861086202057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b23a9bbba80d%3A0xdacdb7fd592feb90!2sCentro%20Universitario%20de%20Ciencias%20Exactas%20e%20Ingenier%C3%ADas!5e0!3m2!1ses-419!2smx!4v1679280723522!5m2!1ses-419!2smx"  height="500" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="w-100 d-flex justify-content-center align-items-center mapa mt-5 border-top">
+    <div class="contenedor-horario mt-5">
+        <div class="row row-cols-2 w-100 justify-content-around  contenedor-horario2">
+            <div class=" col-md-12 w-100 text-center mt-3">
+                <h2>Horario</h2>
+            </div>
+
+            <div class=" col-md-5  mt-3 text-center">
+                <h4>Lunes a Viernes</h4>
+                <p>Lorem ipsum</p>
+            </div>
+
+            <div class=" col-md-5  mt-3 text-center">
+                <h4> Fines de semana</h4>
+                <p>Lorem ipsum</p>
+            </div>
+        </div>
+        
     </div>
 </div>

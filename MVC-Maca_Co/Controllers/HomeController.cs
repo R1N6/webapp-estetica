@@ -13,18 +13,14 @@ namespace MVC_Maca_Co.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Guarderia()
         {
-            ViewBag.Message = "Your application description page.";
-
+            return View();
+        }
+        public ActionResult Estetica()
+        {
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }
