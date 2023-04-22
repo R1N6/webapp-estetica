@@ -1,8 +1,11 @@
-﻿using System;
+﻿using MVC_Maca_Co.Models;
+using MVC_Maca_Co.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVC_Maca_Co.Process;
 
 namespace MVC_Maca_Co.Controllers
 {
@@ -21,20 +24,26 @@ namespace MVC_Maca_Co.Controllers
         }
 
         // GET: Usuario/Create
-        public ActionResult Create()
+        public ActionResult Crear()
         {
             return View();
         }
 
+
+
+
         // POST: Usuario/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult UsuarioVistaPost(Usuario usuario)
         {
             try
             {
                 // TODO: Add insert logic here
+                UsuarioProcess usuarioP = new UsuarioProcess();
+                usuarioP.CrearUsuario(usuario);
 
-                return RedirectToAction("Index");
+
+                return View("~/Views/Home/Index.cshtml");
             }
             catch
             {
@@ -85,7 +94,5 @@ namespace MVC_Maca_Co.Controllers
                 return View();
             }
         }
-
-
     }
 }

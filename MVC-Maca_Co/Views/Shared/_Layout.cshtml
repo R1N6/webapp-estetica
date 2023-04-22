@@ -118,33 +118,28 @@
                                 <h3 class="fs-1 fw-bold ">Registrarse</h3>
                             </div>
 
-                            <form action="/" method="post" class="row form-register needs-validation mx-2" novalidate>
+                            <form action="/Usuario/UsuarioVistaPost" method="post" class="row form-register needs-validation mx-2" novalidate>
                                 <div class="col-sm-6">
                                     <label for="txtnombre-register" class="text-start  mx-2 mb-2 px-2">Nombre</label>
-                                    <input type="text" class="form-control  mb-2 " id="txtnombre-register" placeholder=" " autocomplete="off" required>
+                                    <input name="Nombre" type="text" class="form-control  mb-2 " id="txtnombre-register" placeholder=" " autocomplete="off" required>
                                     <div class="invalid-feedback">Ingrese un nombre valido </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="txtapellido-register" class="text-start mx-2 mb-2 px-2">Apellido</label>
-                                    <input type="text" class="form-control  mb-2 " id="txtapellido-register" placeholder=" " autocomplete="off" required>
+                                    <input name="Apellido" type="text" class="form-control  mb-2 " id="txtapellido-register" placeholder=" " autocomplete="off" required>
                                     <div class="invalid-feedback">Ingrese un apellido valido </div>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <label for="txtusuario-register" class="text-start mx-2 mb-2 px-2">Usuario </label>
-                                    <input type="text" class="form-control  my-2 mb-2 " id="txtusuario-register" placeholder=" " autocomplete="off" required>
-                                    <div class="invalid-feedback">Ingrese un usuario valido </div>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="txtcorreo-register" class="text-start  mx-2 mb-2 px-2">Correo Electronico </label>
-                                    <input type="email" class="form-control  mb-2 " id="txtcorreo-register" placeholder=" " required>
+                                    <input name="Correo" type="email" class="form-control  mb-2 " id="txtcorreo-register" placeholder=" " required>
                                     <div class="invalid-feedback">Ingrese un correo valido </div>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="txtpassword-register" class="text-start mx-2 mb-2 px-2">Contraseña</label>
-                                    <input type="password" class="form-control  mb-2 " id="txtpassword-register" placeholder=" " required>
+                                    <input name="Contrasena" type="password" class="form-control  mb-2 " id="txtpassword-register" placeholder=" " required>
                                     <div class="invalid-feedback">Ingrese una contraseña valida </div>
                                 </div>
+                                <input type="hidden" name="Privilegios" value="Cliente"/>
                                 <div class="col-md-12">
                                     <label for="txtpasswordc-register" class="text-start mx-2 mb-2 px-2">Confirmar contraseña</label>
                                     <input type="password" class="form-control  mb-2 " id="txtpasswordc-register" placeholder=" " required>

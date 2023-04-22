@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MVC_Maca_Co.Models;
+using MVC_Maca_Co.Process;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,12 +30,14 @@ namespace MVC_Maca_Co.Controllers
 
         // POST: Estatus/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult EstatusPost(Estatus estatus)
         {
             try
             {
                 // TODO: Add insert logic here
+                EstatusProcess estatusP = new EstatusProcess();
 
+                estatusP.CrearEstatus(estatus);
                 return RedirectToAction("Index");
             }
             catch
