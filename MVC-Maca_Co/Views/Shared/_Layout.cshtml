@@ -11,6 +11,8 @@
 
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 </head>
 <body>
 
@@ -37,12 +39,11 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-5 menu-login">
                     <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../img/usuario.png" alt="Alternate Text" width="30" height="30" />
+                            <i class="fa fa-user "></i>
                         </button>
                         <ul class="dropdown-menu  dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton2">
                             <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#login">Ingresar</a></li>
-                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registrarse">Registrarse</a></li>
-
+                            <li><a class="dropdown-item" href="@Url.Action("Perfil","Home")">Perfil</a></li>
                             <li><hr class="dropdown-divider"></li>
 
                             <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
@@ -55,64 +56,135 @@
 
 
     <!-- Modales -->
-    <div class="modal  fade" id="login" tabindex="-1" aria-labelledby="ModalLogin" aria-hidden="true" data-bs-backdrop="static" >
-        <div class="modal-dialog">
-            <div class="modal-content border-0">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close mx-2" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h2 class="text-center mb-3 mx-5 mt-2 border-bottom"> Iniciar Sesion</h2>
-                    <form>
-                        <div class="mb-3 mx-5">
-                            <label for="Email" class="form-label mt-5" >Correo Electronico</label>
-                            <input type="email" class="form-control border-0 border-bottom " required id="Email" aria-describedby="emailHelp">
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="ModalLogin" >
+        <div class="modal-dialog ">
+            <div class="modal-content ">
+                <div class="modal-body login-modal border-0">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#iniciar" type="button" role="tab" aria-controls="iniciar" aria-selected="true">Iniciar Sesion</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#registrarse" type="button" role="tab" aria-controls="registrarse" aria-selected="false">Registrarse</button>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+
+                        <div class="tab-pane fade show active" id="iniciar" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="img-login">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="header-login mb-3">
+                                <h3 class="fs-1 fw-bold ">Iniciar Sesion</h3>
+                            </div>
+                            <form action="/" method="post" class="row form-login mx-2 needs-validation" novalidate>
+                                <div class="col-md-12">
+                                    <label for="txtcorreo" class="text-start mx-2 mb-2 px-2">Usuario o Correo Electronico</label>
+                                    <input type="email" class="form-control  mb-2 w-100" id="txtcorreo" placeholder=" " required>
+                                    <div class="invalid-feedback">Ingrese un correo o usuario valido </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="txtpassword" class="text-start  mb-2 mx-2 px-2">Contraseña</label>
+                                    <input type="password" class="form-control mb-2  " id="txtpassword" placeholder=" " required>
+                                    <div class="invalid-feedback">Contraseña incorrecta</div>
+                                </div>
+
+                                <div class="d-flex justify-content-around">
+                                    <div class="d-flex align-items-center gap-1">
+                                        <div class="mb-3">
+                                            <input class="form-check-input mt-1" type="checkbox" value="" id="recordarme">
+                                            <label class="form-check-label " for="recordarme">Recordarme </label>
+                                        </div>
+                                    </div>
+                                    <div class="pt-1">
+                                        <div class="mb-3 forgot">
+                                            <a href="#" class="text-decoration-none fw-semibold fst-italic forgot">Olvidaste tu contraseña?</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="mb-3 login-submit">
+                                        <button type="submit" class="btn btn-primary  px-5 py-2">Iniciar Sesion</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="mb-3 mx-5 ">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control border-0 border-bottom " required id="password">
-                        </div>
-                        <button type="submit" class="btn btn-primary mx-5 mb-5 mt-3 px-5">Enviar</button>
-                    </form>
-                </div>
+
+                        <div class="tab-pane fade" id="registrarse" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="header-register mb-3">
+                                <h3 class="fs-1 fw-bold ">Registrarse</h3>
+                            </div>
+
+                            <form action="/" method="post" class="row form-register needs-validation mx-2" novalidate>
+                                <div class="col-sm-6">
+                                    <label for="txtnombre-register" class="text-start  mx-2 mb-2 px-2">Nombre</label>
+                                    <input type="text" class="form-control  mb-2 " id="txtnombre-register" placeholder=" " autocomplete="off" required>
+                                    <div class="invalid-feedback">Ingrese un nombre valido </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="txtapellido-register" class="text-start mx-2 mb-2 px-2">Apellido</label>
+                                    <input type="text" class="form-control  mb-2 " id="txtapellido-register" placeholder=" " autocomplete="off" required>
+                                    <div class="invalid-feedback">Ingrese un apellido valido </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="txtusuario-register" class="text-start mx-2 mb-2 px-2">Usuario </label>
+                                    <input type="text" class="form-control  my-2 mb-2 " id="txtusuario-register" placeholder=" " autocomplete="off" required>
+                                    <div class="invalid-feedback">Ingrese un usuario valido </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="txtcorreo-register" class="text-start  mx-2 mb-2 px-2">Correo Electronico </label>
+                                    <input type="email" class="form-control  mb-2 " id="txtcorreo-register" placeholder=" " required>
+                                    <div class="invalid-feedback">Ingrese un correo valido </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="txtpassword-register" class="text-start mx-2 mb-2 px-2">Contraseña</label>
+                                    <input type="password" class="form-control  mb-2 " id="txtpassword-register" placeholder=" " required>
+                                    <div class="invalid-feedback">Ingrese una contraseña valida </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="txtpasswordc-register" class="text-start mx-2 mb-2 px-2">Confirmar contraseña</label>
+                                    <input type="password" class="form-control  mb-2 " id="txtpasswordc-register" placeholder=" " required>
+                                    <div class="invalid-feedback">Las contraseñas no coinciden </div>
+                                </div>
+
+                              
+                                    <div class="col-md-12 gap-1">
+                                        <input class="form-check-input d-inline-block mt-1  check-terminos" type="checkbox" value="" id="terminos" required>
+                                        <label class="form-check-label label-terminos d-inline-block " for="terminos">Terminos y Condiciones </label>
+                                        <div class="row d-inline w-100 label-terminos"></div>
+                                        <div class="invalid-feedback col-md-12 ">Debe de aceptar los terminos y condiciones </div>
+                                    </div>
 
 
+                                <div class="col-sm-12 mt-3">
+                                    <div class="mb-3 register-submit d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-primary px-5 py-2">Registrarse</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="mb-3 text-google">
+                            <p class="">iniciar sesion con Google:</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="mb-3 login-google">
+                            <a href="#"><i class="fa fa-google"></i></a>
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
 
-
-    <div class="modal  fade" id="registrarse" tabindex="-1" aria-labelledby="ModalRegistrarse" aria-hidden="true" data-bs-backdrop="static" >
-        <div class="modal-dialog">
-            <div class="modal-content border-0">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close mx-2" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h2 class="text-center mb-3 mx-5 mt-2 border-bottom"> Registrarse</h2>
-                    <form>
-                        <div class="mb-3 mx-5">
-                            <label for="Email" class="form-label mt-5">Correo Electronico</label>
-                            <input type="email" class="form-control border-0 border-bottom "required  id="Email" aria-describedby="emailHelp">
-                        </div>
-                        <div class="mb-3 mx-5 ">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control border-0 border-bottom"required id="password">
-                        </div>
-                        <div class="mb-3 mx-5 ">
-                            <label for="c-password" class="form-label">Confirmar Contraseña</label>
-                            <input type="password" class="form-control border-0 border-bottom" required id="c-password">
-                        </div>
-                        <div class="mb-3 mx-5 form-check">
-                            <input type="checkbox" class="form-check-input " required id="terminos">
-                            <label class="form-check-label" for="terminos">Terminos y condiciones</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary mx-5 mb-5 mt-3 px-5 ">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -133,7 +205,7 @@
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center ">
 
                         <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3 text-secondary"></i>Maca & Co
+                            Maca & Co
                         </h6>
                         <p>
                             Lorem ipsum
@@ -153,7 +225,7 @@
                     </div>
 
 
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center text-black ">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center  ">
 
                         <h6 class="text-uppercase fw-bold mb-4">
                             Redes Sociales
@@ -188,7 +260,10 @@
     </footer>
     <!-- Footer -->
 
-    <script type="text/javascript" src="~/Scripts/booo"    ></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/function.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/0506ae5fcb.js" crossorigin="anonymous"></script>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Estetica";
+    Layout = "~/Views/Shared/_PerfilLayout.cshtml";
+}
+<div class=" cuadro m-5">
+    <h2 class="text-center cuadro m-2">Datos del usuario</h2>
+    
+    <div class="container text-center d-flex row justify-content-around m-5">
+        <div class="col-md-5 d-flex">
+            <div class="titulo  col-sm-2 mx-5">Nombre</div>
+            <div id="" class="datos col-sm-10 text-start">lorem</div>
+        </div>
+
+        <div class="col-md-5 d-flex">
+            <div class="titulo  col-sm-2 mx-5">Apellido</div>
+            <div id="" class="datos col-sm-10 text-start">lorem</div>
+        </div>
+
+        <div class="col-md-5 d-flex">
+            <div class="titulo  col-sm-2 mx-5">Correo</div>
+            <div id="" class="datos col-sm-10 text-start">lorem</div>
+        </div>
+
+        <div class="col-md-5 d-flex">
+            <div class="titulo  col-sm-2 mx-5">Usuario</div>
+            <div id="" class="datos col-sm-10 text-start">lorem</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+            <h2 class="subtitulo"><span>Cambiar contraseña</span></h2>
+        </div>
+    </div>
+</div>
+
+<form action="/" method="post" class="needs-validation d-flex justify-content-around row m-1 form-perfil" novalidate>
+    <div class="col-md-4">
+        <label for="txtnewpassword" class="text-start mx-2 mb-2 px-2">Nueva contraseña</label>
+        <input type="password" class="form-control  mb-2 " id="txtnewpassword" placeholder=" " required>
+        <div class="invalid-feedback">Campo vacio  debe de ingresar la nueva contraseña</div>
+    </div>
+    <div class="col-md-4">
+        <label for="txtconfirm" class="text-start mx-2 mb-2 px-2">Confirmar contraseña</label>
+        <input type="password" class="form-control  mb-2 " id="txtconfirm" placeholder=" " required>
+        <div class="invalid-feedback">Las contraseñas no coinciden </div>
+    </div>
+        <div class="col-sm-12 mt-2">
+            <div class="mb-3 login-submit d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary  mt-3 px-5 py-2">Guardar cambios</button>
+            </div>
+        </div>
+</form>

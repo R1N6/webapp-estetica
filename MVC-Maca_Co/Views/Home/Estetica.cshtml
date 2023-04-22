@@ -3,6 +3,143 @@
     ViewBag.Title = "Estetica";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<div class="body-carrusel">
+    <div class="container swiper">
+        <div class="slide-container">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="https://ichef.bbci.co.uk/news/640/amz/worldservice/live/assets/images/2015/06/12/150612173542_mascota_promo_624x351_thinkstock.jpg" alt="Alternate Text" />
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJtdi5zc5LcCsGMfN7F5Z_opiMInsZj7rt6Q&usqp=CAU" alt="Alternate Text" />
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="https://images3.alphacoders.com/865/thumb-1920-86537.jpg" alt="Alternate Text" />
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="https://images8.alphacoders.com/396/396349.jpg" alt="Alternate Text" />
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt="Alternate Text" />
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-box">
+                        <img src="https://images7.alphacoders.com/324/324176.jpg" alt="Alternate Text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+            <h2 class="subtitulo"><span>Agendar cita</span></h2>
+        </div>
+    </div>
+</div>
 
-<h2>Estetica</h2>
+<div class="container mb-1 container-form-estetica">
 
+    <form action="/" method="post" class="needs-validation row m-1 justify-content-around  align-content-center d-flex form-estetica" novalidate>
+        <div class="form-file col-md-5 m-4">
+            <div class="form-file__action">
+                <label for="image" class="title ">Foto de la mascota(Opcional)</label>
+
+                <input type="file" name="image" id="image" />
+            </div>
+            <div class="form-file__result" id="result-image">
+                <img id="img-result" alt="" />
+            </div>
+        </div>
+
+
+        <div class="col-md-5 m-4 pt-5 ">
+            <label for="txtmascota" class="text-start mx-2 mb-2 px-2">Nombre de la mascota</label>
+            <input type="text" class="form-control  mb-2 " id="txtmascota" placeholder=" " required>
+            <div class="invalid-feedback">Ingrese el nombre de la mascota </div>
+
+            <label for="txtcita" class="text-start mx-2 mb-2 px-2">Citas disponibles:</label>
+            <input type="date" class="form-control  mb-2 " id="txtcita" placeholder=" " required>
+            <div class="invalid-feedback">Ingrese el dia de la cita </div>
+
+            <label for="txthora" class="text-start mx-2 mb-2 px-2">Horarios disponibles:</label>
+            <input type="time" class="form-control  mb-2 " id="txthora" placeholder=" " required>
+            <div class="invalid-feedback">Ingrese la hora de la cita </div>
+            <div class="valid-feedback"> </div>
+            <div class="col-sm-12 mt-2">
+                <div class="mb-3 login-submit d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary  mt-3 px-5 py-2">Agendar cita</button>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+
+</div>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Citaaceptada">
+    Aceptada
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="Citaaceptada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="m-5 ">
+                    <div class="w-100 d-flex justify-content-center check mb-2">
+                        <i class="fa-solid fa-check fa  "></i>
+                    </div>
+                    <h4 class="text-center">Se agendo su cita exitosamente</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CitaRechazada">
+    Rechazada
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="CitaRechazada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="m-5 ">
+                    <div class="w-100 d-flex justify-content-center xmark mb-2">
+
+                        <p class="x">
+                            <i class="fa fa-solid fa-plus"></i>
+                        </p>
+                    </div>
+                    <h4 class="text-center">Su cita no fue aceptada intente de nuevo</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="~/Scripts/Carrusel.js"></script>

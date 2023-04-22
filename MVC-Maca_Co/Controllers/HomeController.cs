@@ -22,5 +22,29 @@ namespace MVC_Maca_Co.Controllers
             return View();
         }
 
+        public ActionResult Perfil()
+        {
+            return View();
+        }
+
+        public ActionResult Citas()
+        {
+            return View();
+        }
+
+        public ActionResult Usuarios()
+        {
+            return View();
+        }
+
+        public ActionResult EsteticaAdmin()
+        {
+            return View();
+        }
+
+        public ActionResult GuarderiaAdmin()
+        {
+            return View();
+        }
     }
 }
