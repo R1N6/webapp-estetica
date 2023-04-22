@@ -33,7 +33,7 @@ namespace MVC_Maca_Co.Process
 
         }
 
-        public List<Usuario> RecuperarUsuario(string correo, string contra)
+        public Usuario RecuperarUsuario(string correo, string contra)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace MVC_Maca_Co.Process
                     string query = Query.LOGIN_Usuario;
 
 
-                    var result = db.Query<Usuario>(query, new {correo, contra}).ToList();
+                    Usuario result = (Usuario)db.QueryFirst<Usuario>(query, new {correo, contra});
                     return result;
 
                 }
