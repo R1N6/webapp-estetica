@@ -24,7 +24,6 @@ namespace MVC_Maca_Co.Process
 
                     var result = db.Execute(query, new { usuario.Nombre, usuario.Apellido, usuario.Correo, usuario.Contrasena, usuario.Privilegios});
 
-
                 }
             }
             catch (Exception ex)
