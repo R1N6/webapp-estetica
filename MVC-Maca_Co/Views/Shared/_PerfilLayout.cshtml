@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Perfil.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="">
+    <div class="d-flex " id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end  menu-perfil" id="sidebar-wrapper">
+            
+            <div class="list-group list-group-flush  d-flex justify-content-center align-content-center ">
+                <div class="w-100 my-3">
+                <img src="https://static.vecteezy.com/system/resources/previews/008/442/086/original/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" alt="Alternate Text"  class="img-fluid"  />
+                </div>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3 border-bottom border-top" href="@Url.Action("Perfil","Home")">Ver Perfil</a>
+
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="@Url.Action("Citas","Home")">Historial de citas</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="@Url.Action("Citas","Home")">Citas Canceladas</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="@Url.Action("Citas","Home")">Cita en curso</a>
+            </div>
+        </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-perfil navbar-expand-lg   border-bottom">
+                <div class="container-fluid ">
+                    <button class="btn px-3 menu-bars" id="sidebarToggle"><i class="fa fa-bars"></i></button>
+                    <div class="  text-center px-3 "><i class="fa fa-mountain"></i>MACA & CO</div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item active"><a class="nav-link" href="@Url.Action("Index","Home")"> Regresar al inicio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <div class="container w-100">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+     
+        
+    <script type="text/javascript" src="~/Scripts/Perfil.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/0506ae5fcb.js" crossorigin="anonymous"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

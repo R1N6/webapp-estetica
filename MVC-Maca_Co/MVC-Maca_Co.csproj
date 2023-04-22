@@ -125,6 +125,7 @@
     <Compile Include="Controllers\EstatusController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -133,6 +134,7 @@
     <Compile Include="Models\Hotel.cs" />
     <Compile Include="Models\Query.cs" />
     <Compile Include="Models\Trabajador.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +154,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Admin.css" />
+    <Content Include="Content\Perfil.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -208,6 +212,10 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\function.js" />
+    <Content Include="Scripts\Admin.js" />
+    <Content Include="Scripts\Carrusel.js" />
+    <Content Include="Scripts\Perfil.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -223,6 +231,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Estetica.cshtml" />
     <Content Include="Views\Home\Guarderia.cshtml" />
+    <Content Include="Views\Home\Perfil.cshtml" />
+    <Content Include="Views\Shared\_PerfilLayout.cshtml" />
+    <Content Include="Views\Home\Citas.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Home\Usuarios.cshtml" />
+    <Content Include="Views\Home\EsteticaAdmin.cshtml" />
+    <Content Include="Views\Home\GuarderiaAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -230,6 +245,7 @@
     <Folder Include="Views\Corte\" />
     <Folder Include="Views\Estatus\" />
     <Folder Include="Views\Hotel\" />
+    <Folder Include="Views\Usuario\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
