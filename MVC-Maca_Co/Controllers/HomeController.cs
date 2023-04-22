@@ -13,6 +13,11 @@ namespace MVC_Maca_Co.Controllers
             return View();
         }
 
+        public ActionResult LogOut()
+        {
+            return View("~/Views/Home/Index.cshtml", null);
+        }
+
         public ActionResult Guarderia()
         {
             return View();

@@ -53,8 +53,13 @@
 
 
                             <li><hr class="dropdown-divider"></li>
-
-                            <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                            
+                            <li>
+                                <button type="button"
+                                        class="dropdown-item"
+                                       value="Go Somewhere Else"
+                                       onclick="location.href='@Url.Action("LogOut", "Home")'" >Cerrar sesión</button>
+                            </li>
                         </ul>
                     </div>
                 </ul>
