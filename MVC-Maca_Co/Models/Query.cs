@@ -7,5 +7,7 @@ namespace MVC_Maca_Co.Models
 {
     public class Query
     {
+        public static string INSERT_Estatus = "insert into Estatus(Estatus, Descripcion) values(@Estatus,@Descripcion)";
+        public static string INSERT_Usuario = "insert into Usuario(Nombre, Apellido, Correo, Contrasena, Privilegios) values (@Nombre, @Apellido, @Correo, @Contrasena, @Privilegios)";
     }
 }

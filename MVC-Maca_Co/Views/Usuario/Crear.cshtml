@@ -1,0 +1,36 @@
+﻿@model MVC_Maca_Co.Models.Usuario
+
+
+@{
+    //ViewBag.Title = "Crear";
+    ViewData["Title"] = "Crear Tipo Cuenta";
+
+
+}
+
+<h2>Crear Usuarios</h2>
+
+<form action="/Usuario/UsuarioVistaPost" method="post">
+    <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre</label>
+        <input type="text" id="Nombre" name="Nombre" class="form-control" />
+
+        <label for="Apellido" class="form-label">Apellido</label>
+        <input type="text" id="Apellido" name="Apellido" class="form-control" />
+
+        <label for="Correo" class="form-label">Correo</label>
+        <input type="text" id="Correo" name="Correo" class="form-control" />
+
+        <label for="Contrasena" class="form-label">Contrasena</label>
+        <input type="text" id="Contrasena" name="Contrasena" class="form-control" />
+
+        <label for="Privilegios" class="form-label">Privilegios</label>
+        <input type="text" id="Privilegios" name="Privilegios" class="form-control" />
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+
+
+</form>
+

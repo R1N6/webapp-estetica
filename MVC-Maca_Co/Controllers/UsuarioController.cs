@@ -1,44 +1,49 @@
 ﻿using MVC_Maca_Co.Models;
-using MVC_Maca_Co.Process;
+using MVC_Maca_Co.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVC_Maca_Co.Process;
 
 namespace MVC_Maca_Co.Controllers
 {
-    public class EstatusController : Controller
+    public class UsuarioController : Controller
     {
-        // GET: Estatus
+        // GET: Usuario
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Estatus/Details/5
+        // GET: Usuario/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Estatus/Create
-        public ActionResult Create()
+        // GET: Usuario/Create
+        public ActionResult Crear()
         {
             return View();
         }
 
-        // POST: Estatus/Create
+
+
+
+        // POST: Usuario/Create
         [HttpPost]
-        public ActionResult EstatusPost(Estatus estatus)
+        public ActionResult UsuarioVistaPost(Usuario usuario)
         {
             try
             {
                 // TODO: Add insert logic here
-                EstatusProcess estatusP = new EstatusProcess();
-                
-                estatusP.CrearEstatus(estatus);
-                return RedirectToAction("Index");
+                UsuarioProcess usuarioP = new UsuarioProcess();
+                usuarioP.CrearUsuario(usuario);
+
+
+                return View("Crear.cshtml");
             }
             catch
             {
@@ -46,13 +51,13 @@ namespace MVC_Maca_Co.Controllers
             }
         }
 
-        // GET: Estatus/Edit/5
+        // GET: Usuario/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Estatus/Edit/5
+        // POST: Usuario/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -68,13 +73,13 @@ namespace MVC_Maca_Co.Controllers
             }
         }
 
-        // GET: Estatus/Delete/5
+        // GET: Usuario/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Estatus/Delete/5
+        // POST: Usuario/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
