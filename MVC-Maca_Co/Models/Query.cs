@@ -12,5 +12,9 @@ namespace MVC_Maca_Co.Models
             Usuario(Nombre, Apellido, Correo, Contrasena, Privilegios) 
             values (@Nombre, @Apellido, @Correo, @Contrasena, @Privilegios)";
         public static string LOGIN_Usuario = @"SELECT * FROM Usuario WHERE Correo = @correo AND Contrasena = @contra";
+
+        public static string INSERT_CORTE = @"INSERT INTO Corte 
+            (NombreMascota, Fecha, Servicio, Hora, FK_Cliente) 
+            VALUES (@nombremascota, @fecha, @servicio, @hora, @fk_cliente)";
     }
 }

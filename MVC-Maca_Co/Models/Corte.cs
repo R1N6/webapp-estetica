@@ -9,9 +9,12 @@ namespace MVC_Maca_Co.Models
     {
         public int Id { get; set; }
         public int Id_Trabajador { get; set; }
+        public int FK_Cliente { get; set; }
         public int Id_Status { get; set; }
         public string NombreMascota { get; set; }
         public string Servicio { get; set; }
-        public DateTime FechaCorte { get; set; }
+        public DateTime Fecha { get; set; }
+        public TimeSpan Hora { get; set; }
+
     }
 }

@@ -135,6 +135,7 @@
     <Compile Include="Models\Query.cs" />
     <Compile Include="Models\Trabajador.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Process\CorteProcess.cs" />
     <Compile Include="Process\EstatusProcess.cs" />
     <Compile Include="Process\UsuarioProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

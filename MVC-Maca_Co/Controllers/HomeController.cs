@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC_Maca_Co.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +10,7 @@ namespace MVC_Maca_Co.Controllers
     public class HomeController : Controller
     {
         public ActionResult Index()
-        {
+        {   
             return View();
         }
 

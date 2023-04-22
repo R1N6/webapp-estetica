@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MVC_Maca_Co.Models;
+using MVC_Maca_Co.Process;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,17 +30,17 @@ namespace MVC_Maca_Co.Controllers
 
         // POST: Corte/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult CreateCorte(Corte co)
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                CorteProcess corteP = new CorteProcess();
+                corteP.CrearCorte(co);
+                return View("~/Views/Home/Estetica.cshtml");
             }
             catch
             {
-                return View();
+                return View("~/Views/Home/Estetica.cshtml");
             }
         }
 

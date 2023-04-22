@@ -37,6 +37,7 @@ namespace MVC_Maca_Co.Controllers
             {
                 UsuarioProcess usuarioP = new UsuarioProcess();
                 var model = usuarioP.RecuperarUsuario(Correo, Contrasena);
+                TempData["UserID"] = model.ID;
                 return View("~/Views/Home/Index.cshtml", model);
             }
             catch

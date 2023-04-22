@@ -1,5 +1,10 @@
 ﻿
 @{
+    if(TempData["UserID"] == null)
+    {
+        TempData["UserID"] = 0;
+    }
+
     ViewBag.Title = "Estetica";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -55,7 +60,7 @@
 
 <div class="container mb-1 container-form-estetica">
 
-    <form action="/" method="post" class="needs-validation row m-1 justify-content-around  align-content-center d-flex form-estetica" novalidate>
+    <form action="/Corte/CreateCorte" method="post" class="needs-validation row m-1 justify-content-around  align-content-center d-flex form-estetica" novalidate>
         <div class="form-file col-md-5 m-4">
             <div class="form-file__action">
                 <label for="image" class="title ">Foto de la mascota(Opcional)</label>
@@ -69,16 +74,18 @@
 
 
         <div class="col-md-5 m-4 pt-5 ">
+            <input type="hidden" value="@TempData["UserID"].ToString()" name="FK_Cliente" />
+            <input name="Servicio" type="hidden" value="Corte" />
             <label for="txtmascota" class="text-start mx-2 mb-2 px-2">Nombre de la mascota</label>
-            <input type="text" class="form-control  mb-2 " id="txtmascota" placeholder=" " required>
+            <input name="NombreMascota" type="text" class="form-control  mb-2 " id="txtmascota" placeholder=" " required>
             <div class="invalid-feedback">Ingrese el nombre de la mascota </div>
 
             <label for="txtcita" class="text-start mx-2 mb-2 px-2">Citas disponibles:</label>
-            <input type="date" class="form-control  mb-2 " id="txtcita" placeholder=" " required>
+            <input name="Fecha" type="date" class="form-control  mb-2 " id="txtcita" placeholder=" " required>
             <div class="invalid-feedback">Ingrese el dia de la cita </div>
 
             <label for="txthora" class="text-start mx-2 mb-2 px-2">Horarios disponibles:</label>
-            <input type="time" class="form-control  mb-2 " id="txthora" placeholder=" " required>
+            <input name="Hora" type="time" class="form-control  mb-2 " id="txthora" placeholder=" " required>
             <div class="invalid-feedback">Ingrese la hora de la cita </div>
             <div class="valid-feedback"> </div>
             <div class="col-sm-12 mt-2">
