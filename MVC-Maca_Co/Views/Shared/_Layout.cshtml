@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model  List<MVC_Maca_Co.Models.Usuario>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -42,8 +43,15 @@
                             <i class="fa fa-user "></i>
                         </button>
                         <ul class="dropdown-menu  dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton2">
-                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#login">Ingresar</a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Perfil","Home")">Perfil</a></li>
+                            @if (Model == null)
+                            {
+                                <div>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#login">Ingresar</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("Perfil","Home")">Perfil</a></li>
+                                </div>
+                            }
+
+
                             <li><hr class="dropdown-divider"></li>
 
                             <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
@@ -78,16 +86,16 @@
                             <div class="header-login mb-3">
                                 <h3 class="fs-1 fw-bold ">Iniciar Sesion</h3>
                             </div>
-                            <form action="/" method="post" class="row form-login mx-2 needs-validation" novalidate>
+                            <form action="/Usuario/BuscarUsuario" method="get" class="row form-login mx-2 needs-validation" novalidate>
                                 <div class="col-md-12">
                                     <label for="txtcorreo" class="text-start mx-2 mb-2 px-2">Usuario o Correo Electronico</label>
-                                    <input type="email" class="form-control  mb-2 w-100" id="txtcorreo" placeholder=" " required>
+                                    <input name="Correo" type="email" class="form-control  mb-2 w-100" id="txtcorreo" placeholder=" " required>
                                     <div class="invalid-feedback">Ingrese un correo o usuario valido </div>
                                 </div>
 
                                 <div class="col-md-12">
                                     <label for="txtpassword" class="text-start  mb-2 mx-2 px-2">Contraseña</label>
-                                    <input type="password" class="form-control mb-2  " id="txtpassword" placeholder=" " required>
+                                    <input name="Contrasena" type="password" class="form-control mb-2  " id="txtpassword" placeholder=" " required>
                                     <div class="invalid-feedback">Contraseña incorrecta</div>
                                 </div>
 

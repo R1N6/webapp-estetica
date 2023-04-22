@@ -30,7 +30,20 @@ namespace MVC_Maca_Co.Controllers
         }
 
 
-
+        [HttpGet]
+        public ActionResult BuscarUsuario(string Correo, string Contrasena)
+        {
+            try
+            {
+                UsuarioProcess usuarioP = new UsuarioProcess();
+                var model = usuarioP.RecuperarUsuario(Correo, Contrasena);
+                return View("~/Views/Home/Index.cshtml", model);
+            }
+            catch
+            {
+                return View();
+            }
+        }
 
         // POST: Usuario/Create
         [HttpPost]

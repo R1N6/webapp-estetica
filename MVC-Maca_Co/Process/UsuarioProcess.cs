@@ -33,5 +33,26 @@ namespace MVC_Maca_Co.Process
 
         }
 
+        public List<Usuario> RecuperarUsuario(string correo, string contra)
+        {
+            try
+            {
+                contra = Base64Manager.Base64Encode(contra);
+                using (SqlConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Estetica"].ConnectionString))
+                {
+
+                    string query = Query.LOGIN_Usuario;
+
+
+                    var result = db.Query<Usuario>(query, new {correo, contra}).ToList();
+                    return result;
+
+                }
+            }
+            catch (Exception ex) {
+                throw ex; 
+            }
+        }
+
     }
 }
