@@ -177,6 +177,7 @@
     <Content Include="img\telefono.png" />
     <Content Include="img\usuario.png" />
     <Content Include="img\whatsapp.png" />
+    <Content Include="Scripts\Manual.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -241,6 +242,7 @@
     <Content Include="Views\Home\Usuarios.cshtml" />
     <Content Include="Views\Home\EsteticaAdmin.cshtml" />
     <Content Include="Views\Home\GuarderiaAdmin.cshtml" />
+    <Content Include="Views\Home\Manual.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
